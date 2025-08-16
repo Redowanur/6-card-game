@@ -14,7 +14,7 @@ const App = () => {
 		for (let start = 1; start <= 32; start *= 2) {
 			let cnt = 0;
 			let j = start;
-			while (j <= 63) {
+			while (j <= 60) {
 				if (cnt < start) {
 					nums[i].push(j);
 					cnt++;
