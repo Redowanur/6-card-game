@@ -38,10 +38,10 @@ const App = () => {
 	};
 
 	return (
-		<div className="w-[90%] max-w-7xl mx-auto p-5 ">
+		<div className="max-w-7xl mx-auto p-5 ">
 			<div className={`flex flex-col justify-center items-center ${finish && 'hidden'} `}>
 				<p className="text-5xl uppercase font-bold text-emerald-400">6 card game</p>
-				<p className="text-2xl text-gray-600 mb-8 mt-2">Think of a number between 1 to 60. Select all the cards that contain the number</p>
+				<p className="text-2xl text-gray-600 mb-8 mt-2 text-center">Think of a number between 1 to 60. Select all the cards that contain the number</p>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 					{
 						numbers.map((nums, id) =>
@@ -59,7 +59,7 @@ const App = () => {
 				<p className="text-2xl my-5">Are you done selecting cards?</p>
 				<button className="bg-emerald-400 text-white text-lg font-semibold py-3 px-5 rounded-xl transition-all duration-300 transform hover:scale-103 cursor-pointer mb-8" onClick={() => setFinish(true)} >Yes</button>
 			</div>
-			<div className={`h-screen flex flex-col justify-center items-center ${!finish && 'hidden'}`}>
+			<div className={`min-h-[90vh] flex flex-col justify-center items-center ${!finish && 'hidden'}`}>
 				<p className="text-3xl">Your number is</p>
 				<p className="text-8xl font-bold">{ans}</p>
 				<p className="text-xl mt-10 mb-2">Do you want to play again?</p>
@@ -70,7 +70,7 @@ const App = () => {
 				}} >Yes</button>
 
 			</div>
-			<div className="text-center w-[90%] max-w-6xl mx-auto border-t-2 border-t-black/60 py-3 text-gray-800 text-sm tracking-wide">
+			<div className="text-center border-t-2 border-t-black/60 py-3 text-gray-800 text-sm tracking-wide">
 				© {year} Redowanur Rahman - All rights reserved
 			</div>
 
